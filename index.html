@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الصفحة الرئيسية - قواعد اللغة الإنجليزية</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #121212;
+            color: #f0f0f0;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            overflow-x: hidden;
+        }
+
+        .header {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+        }
+
+        .menu-button {
+            background-color: #00bfff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            font-size: 2rem;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .menu-button:hover {
+            background-color: #ffcc00;
+        }
+
+        .sidebar {
+            position: fixed;
+            top: 0;
+            left: -300px;
+            width: 300px;
+            height: 100%;
+            background-color: #1e1e1e;
+            box-shadow: 4px 0 15px rgba(0, 0, 0, 0.3);
+            padding: 20px;
+            box-sizing: border-box;
+            z-index: 1000;
+            transition: left 0.4s ease-in-out;
+        }
+
+        .sidebar.open {
+            left: 0;
+        }
+
+        .sidebar h1 {
+            color: #ffcc00;
+            margin-bottom: 20px;
+            font-size: 3rem;
+        }
+
+        .sidebar a {
+            display: block;
+            color: #00bfff;
+            text-decoration: none;
+            margin: 100px 0;
+            font-size: 2rem;
+            transition: color 0.3s;
+        }
+
+        .sidebar a:hover {
+            color: #ffcc00;
+        }
+
+        .content {
+            padding: 15px;
+            transition: margin-left 0.4s ease-in-out;
+        }
+
+        .content.shifted {
+            margin-left: 300px; /* تعويض المساحة التي تشغلها القائمة */
+        }
+
+        .card {
+            background-color: #1e1e1e;
+            padding: 40px; 
+            border-radius: 20px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            margin: 20px auto;
+            max-width: 90%;
+            text-align: center;
+            transition: max-width 0.4s ease-in-out;
+        }
+        
+        .card.smaller {
+            max-width: 90%; /* تقليص المستطيل من اليسار */
+        }
+
+        .card h1 {
+            font-size:4.5vw;
+            color: #ffcc00;
+        }
+        .card h2{
+         color: #00bfff; 
+        } 
+        
+        .highlight{
+          color: #00cc99;
+         font-weight: bold;
+        } 
+
+        .card p {
+            font-size: 1rem;
+            line-height: 1.8;
+        }
+        
+            @media (max-width: 787px) {
+          body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #121212;
+            color: #f0f0f0;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            overflow-x: hidden;
+        }
+
+        .header {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+        }
+
+        .menu-button {
+            background-color: #00bfff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .menu-button:hover {
+            background-color: #ffcc00;
+        }
+
+        .sidebar {
+            position: fixed;
+            top: 0;
+            left: -300px;
+            width: 150px;
+            height: 100%;
+            background-color: #1e1e1e;
+            box-shadow: 4px 0 15px rgba(0, 0, 0, 0.3);
+            padding: 20px;
+            box-sizing: border-box;
+            z-index: 1000;
+            transition: left 0.4s ease-in-out;
+        }
+
+        .sidebar.open {
+            left: 0;
+        }
+
+        .sidebar h2 {
+            color: #ffcc00;
+            margin-bottom: 20px;
+            font-size: 2rem;
+        }
+
+        .sidebar a {
+            display: block;
+            color: #00bfff;
+            text-decoration: none;
+            margin: 50px 0;
+            font-size: 1rem;
+            transition: color 0.3s;
+        }
+
+        .sidebar a:hover {
+            color: #ffcc00;
+        }
+
+        .content {
+            padding: 0px;
+            transition: margin-left 0.4s ease-in-out;
+        }
+
+        .content.shifted {
+            margin-left: 160px; /* تعويض المساحة التي تشغلها القائمة */
+        }
+
+        .card {
+            background-color: #1e1e1e;
+            padding: 20px; 
+            border-radius: 20px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            margin: 10px auto;
+            max-width: 80%;
+            text-align: center;
+            transition: max-width 0.4s ease-in-out;
+        } 
+        .card.smaller {
+            max-width: 90%; /* تقليص المستطيل من اليسار */
+        }
+         .card1.smaller {
+            max-width: 90%; /* تقليص المستطيل من اليسار */
+        }
+
+        .card h1 {
+            font-size:6vw;
+            color: #ffcc00;
+            margin-top:40px; 
+            margin-bottom:30px; 
+        }
+        .card h2{
+         color: #00bfff; 
+        } 
+        
+        .highlight{
+          color: #00cc99;
+         font-weight: bold;
+        } 
+
+        .card p {
+            font-size: 1rem;
+            line-height: 1.8;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <button class="menu-button" onclick="toggleSidebar()">☰ القواعد</button>
+    </div>
+
+    <div class="sidebar" id="sidebar">
+        <h1>قائمة القواعد</h1>
+        <a href="Establishment.html" target="_blank">التأسيس</a>
+        <a href="Simple present.html" target="_blank">Simple present (مضارع بسيط)</a>
+        <a href="Present continuous.html" target="_blank">Present continuous (مضارع مستمر)</a>
+        <a href="Simple past.html" target="_blank">Simple past (ماضي بسيط)</a>
+        <a href="Past continuous.html" target="_blank">Past continuous (ماضي مستمر)</a>
+        <a href="" target="_blank"></a>
+    </div>
+
+    <div class="content" id="content">
+        <div class="card">
+            <h1>مرحبًا بك في دليل قواعد اللغة الإنجليزية</h1>
+        </div>
+          <div class="card">
+            <h2>ما هي القواعد الأنجليزية؟</h2>
+            <p>وهي تعبر عن <span class="highlight">مجموعة القواعد</span> التي تحدد تراكيب الجمل والتعبيرات المختلفة في اللغة الإنجليزية
+            </p>
+        </div>
+          <div class="card">
+            <h2>هل القواعد الأنجليزية مهمة؟</h2>
+  <p>نعم، قواعد الانجليزية <span  class="highlight">مهمة بشكل كبير</span> ؛ لذلك من خلالها يتم بناء الكلمة بالشكل الصحيح؛ ويتم وضع كل جزئية من أجزاء الجملة في مكانها الصحيح. أيضا كل ما يحلو لك بإمكانك الحديث عنه بطريقة مبسطة باستخدام قواعد الإنجليزي، فهي المفتاح لفهم أساسيات التواصل باللغة الإنجليزية بشكل صحيح وسليم </p>
+        </div>
+        <div class="card">
+            <p> يمكنك اختيار الموضوع الذي تريد تعلمه من خلال <span class="highlight">القائمة الجانبية</span> (من خلال الضغط على كلمة قواعد في اعلى الشاشه على اليسار) فهي تحتوي على <span class="highlight">شرح شامل</span> لكل من <span class="highlight">الأساسيات والقواعد</span>
+            </p>
+            </div>
+    </div>
+
+    <script>
+        const sidebar = document.getElementById('sidebar');
+        const content = document.getElementById('content');
+        const cards = document.querySelectorAll('.card');
+
+        function toggleSidebar() {
+            sidebar.classList.toggle('open');
+            content.classList.toggle('shifted');
+            
+            // تقليص أو إعادة حجم المستطيلات عند فتح/إغلاق القائمة الجانبية
+            cards.forEach(card => {
+                card.classList.toggle('smaller');
+            });
+        }
+
+        document.addEventListener('click', (event) => {
+            if (!sidebar.contains(event.target) && !event.target.closest('.menu-button')) {
+                sidebar.classList.remove('open');
+                content.classList.remove('shifted');
+                
+                // إعادة حجم المستطيلات عند إغلاق القائمة
+                cards.forEach(card => {
+                    card.classList.remove('smaller');
+                });
+            }
+        });
+    </script>
+</body>
+</html>

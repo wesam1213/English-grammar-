@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Present continuous</title>
+    <style>
+/* Style for the body and background */
+body {
+    background-color: #121212;
+    font-family: 'Arial', sans-serif;
+    color: #f0f0f0;
+    margin: 0;
+    padding: 1px 1px 100px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    direction: rtl;
+}
+        /* Title container styling with fluid width */
+        .title-container {
+            background-color: #1e1e1e;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            width: 100%;
+            max-width: 90%;
+            margin-bottom: 20px;
+            box-sizing: border-box;
+        }
+
+       /* Content container styling with fluid width */
+        .content-container {
+            background-color: #1e1e1e;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            width: 100%;
+            max-width: 90%;
+            animation: slideIn 1s ease-out;
+            box-sizing: border-box;
+            
+        }
+
+.table {
+    width: 100%;
+    height:300px; 
+    border-collapse: collapse;
+    text-align: center;
+    table-layout: fixed;
+    color: #fff;
+    background: linear-gradient(135deg,  #1e1e1e,#56586E); /* لون متدرج */
+    direction: ltr;
+    border-radius: 12px; /* حواف مستديرة */
+    overflow: hidden; /* لتطبيق الحواف المستديرة على محتويات الجدول */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* ظل لجعل الجدول بارزًا */
+    font-size: 4.5vw; /* حجم النص بالنسبة لعرض الشاشة */
+    text-align: justify ;
+}
+
+td {
+  text-align:center; 
+    padding: 10px;
+    word-wrap: break-word;
+    border: 1px solid rgba(255, 255, 255, 0.3); /* حدود شفافة قليلاً */
+    background: rgba(0, 0, 0, 0.1); /* خلفية خفيفة للخلايا */
+}
+
+tr:hover td {
+    background: rgba(0, 0, 0, 0.3); /* تأثير عند تمرير الفأرة */
+    transition: background 0.3s ease; /* انتقال سلس */
+}
+ 
+
+        /* Ensuring the containers take full width on large screens */
+        @media (min-width: 787px) {
+            .title-container, .content-container {
+                padding: 60px;
+            }
+        }
+
+
+        /* Title styling */
+        .title {
+            font-size: 6vw; /* حجم مرن للعنوان */
+            color: #ffcc00;
+            text-align:center; 
+        }
+        .title1 {
+            font-size: 5vw; /* حجم مرن للترجمة */
+            color: #ffcc00;
+            text-align:center; 
+        } 
+   .description, .description2, .description3, .liexample1, .liexample2 {
+            padding-right: 20px;
+            box-sizing: border-box;
+        }
+
+
+        /* Description styling */
+        .description {
+            font-size: 4vw; /* حجم مرن للنص */
+            margin-bottom: 20px;
+            line-height: 1.5;
+            direction: rtl;
+        }
+        .description2 {
+            color: #00bfff;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* ظل خفيف */
+            font-size: 5vw; /* حجم مرن للنص */
+            margin-bottom: 20px;
+            line-height: 1.5;
+            direction: rtl;
+        }
+
+        /* Examples styling */
+        .examples {
+            color: #ffcc00;
+            margin-bottom: 20px;
+            direction: ltr;
+            font-size: 5vw; /* حجم مرن للأمثلة */
+        }
+        .examples1 {
+            margin-bottom: 10px;
+            direction: ltr;
+            font-size:5.5vw; /* حجم مرن للأمثلة الصغيرة */
+            padding:0px;
+            margin:0px; 
+        } 
+
+        .liexample {
+            margin: 10px 0;
+            font-size: 4vw; /* حجم مرن لقائمة الأمثلة */
+        }
+
+        .liexample1 {
+            margin: 10px 0;
+            font-size: 4vw;
+            direction: rtl;
+            padding-right:50px;
+        }
+        .liexample2 {
+            margin: 10px 0;
+            font-size: 4vw;
+            direction: ltr;
+        } 
+        ul{
+         list-style-type: square; /* تغيير الرموز إلى مربعات */
+            padding-left: 10px; /* إزالة المسافة من بداية السطر */
+            margin: 0; /* إزالة الهامش */
+        } 
+
+        .highlight {
+            color: #00cc99;
+            font-weight: bold;
+        }
+
+        /* Animation for content-container */
+        @keyframes slideIn {
+            0% {
+                transform: translateY(-30px);
+                opacity: 0;
+            }
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+        .signature {
+            direction: ltr;
+            font-size: 3vw;
+            color: #f0f0f0;
+            font-style: italic;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="title-container">
+        <h1 class="title"> Past continuous </h1>
+        <h3 class="title1"><الماضي المستمر></h3>
+    </div>
+    
+   <div class="content-container">
+ <p class="description">
+  الماضي المستمر'Past Continuous'‏ هو زمن من أزمنة اللغة الإنجليزية وهو الزمن الذي يشير إلى فعل أو حدث مستمر في زمن الماضي أي أن هذا الحدث مازال في الاستمرار في الماضي بحيث بدأ في وقت معين في الماضي ومازال مستمرا حتي الوقت الحاضر، وبعبارة أخرى يُعَبِر الماضي المستمر عن أفعال غير مُنتهية أو غير مكتمِلة في الماضي. 
+ </p>
+   <h2 class="description2">تكوين الماضي المستمر:</h2>
+    <pre class="examples1">
+      <sub>was</sub>
+  S +     + V<sub>1 ing</sub>
+      <sup>were</sup>
+    </pre>
+        <br>
+ <h2 class="examples">Examples:</h2>
+ <ol class="liexample2">
+ <li>He <span class="highlight">was studying</span> hard</li>
+ <br>
+  <li>I <span class="highlight">was playing</span> football</li>
+  <br>
+  <li>We <span class="highlight">were learning</span> English</li>
+    </ol>
+  <br>
+<h2 class="description2"> 
+الروابط: 
+</h2>
+  <p class="description">
+    يمتاز الماضي المستمر بروابط تُعتبر كالدلائل وتستخدم في ربط جملتين احدهما ماضي مستمر والأخرى ماضي بسيط وهما (when)'عندما' و (while)'بينما'.
+<table class="table" border="1" >
+  <tr>
+    <td>ماضي مستمر <span>⟸ when ⟹</span> ماضي بسيط</td>
+  </tr>
+  <tr>
+    <td>ماضي بسيط <span>⟸ while ⟹</span> ماضي مستمر</td>
+  </tr>
+  </table> 
+ </p>
+     <h2 class="examples">Example:</h2>
+      <ol class="liexample2">
+ <li> The phone rang <span class="highlight">while</span> l was watching TV</li>
+ <br>
+  <li>He was riding his bike <span class="highlight">when</span> he fell off</li>
+    </ol>
+   <br>
+    <h3 class="description2">
+     ملحوظة: 
+   </h3>
+  <p class="description">
+    من الممكن ان يأتي الرابط اول الجملة عندها يصبح الترتيب: 
+  </p>
+  <table class="table" border="1" >
+  <tr>
+    <td><span>when ⟹</span> ماضي مستمر ، ماضي بسيط </td>
+  </tr>
+  <tr>
+     <td><span>while ⟹</span> ماضي بسيط ، ماضي مستمر</td>
+  </tr>
+  </table> 
+   <br>
+   <br>
+   <hr>
+   <div class="signature">
+    <p>Project by: Wesam AL-zoubi</p>
+</div>
+  </div>
+
+</body>
+</html> 

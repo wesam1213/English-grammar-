@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Present </title>
+    <style>
+        /* Style for the body and background */
+   body {
+  background-color: #121212;
+   font-family: 'Arial', sans-serif;
+    color: #f0f0f0;
+     margin: 0;
+            padding: 1px 1px 100px;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+          min-height: 100vh;
+        }
+
+        /* Title container styling with fluid width */
+        .title-container {
+            background-color: #1e1e1e;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            margin-bottom: 20px;
+            width: 100%;
+            max-width: 90%; /* تعديل العرض ليتناسب مع الشاشات */
+            text-align: center;
+            box-sizing: border-box;
+        }
+
+        /* Content container styling with fluid width */
+        .content-container {
+            background-color: #1e1e1e;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            width: 100%;
+            max-width: 90%;
+            animation: slideIn 1s ease-out;
+            box-sizing: border-box;
+        }
+
+        /* Ensuring the containers take full width on large screens */
+        @media (min-width: 1200px) {
+            .title-container, .content-container {
+                padding: 20px;
+            }
+        }
+
+        /* Title styling */
+        .title {
+            font-size: 6vw; /* حجم مرن للعنوان */
+            color: #ffcc00;
+        }
+        .title1 {
+            font-size: 5vw; /* حجم مرن للترجمة */
+            color: #ffcc00;
+        } 
+
+        /* Description styling */
+        .description {
+            font-size: 4vw; /* حجم مرن للنص */
+            margin-bottom: 20px;
+            line-height: 1.5;
+            direction: rtl;
+        }
+        .description2 {
+            color: #00bfff;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* ظل خفيف */
+            font-size: 5vw; /* حجم مرن للنص */
+            margin-bottom: 20px;
+            line-height: 1.5;
+            direction: rtl;
+        }
+
+        /* Examples styling */
+        .examples {
+            color: #ffcc00;
+            margin-bottom: 10px;
+            direction: ltr;
+            font-size: 5vw; /* حجم مرن للأمثلة */
+        }
+        .examples1 {
+            color: #ffcc00;
+            margin-bottom: 10px;
+            direction: ltr;
+            font-size: 3vw; /* حجم مرن للأمثلة الصغيرة */
+        } 
+
+        .liexample {
+            margin: 10px 0;
+            font-size: 4vw; /* حجم مرن لقائمة الأمثلة */
+        }
+
+        .liexample1 {
+            margin: 10px 0;
+            font-size: 4vw;
+            direction: rtl;
+            padding-right: 50px;
+        }
+        .liexample2 {
+            margin: 10px 0;
+            font-size: 4vw;
+            direction: ltr;
+        } 
+        ul{
+         list-style-type: square; /* تغيير الرموز إلى مربعات */
+            padding-left: 10px; /* إزالة المسافة من بداية السطر */
+            margin: 0; /* إزالة الهامش */
+        } 
+
+        .highlight {
+            color: #00cc99;
+            font-weight: bold;
+        }
+
+        /* Animation for content-container */
+        @keyframes slideIn {
+            0% {
+                transform: translateY(-30px);
+                opacity: 0;
+            }
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+        .signature {
+            direction: ltr;
+            font-size: 3vw;
+            color: #f0f0f0;
+            font-style: italic;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="title-container">
+        <h1 class="title">Simple Present </h1>
+        <h3 class="title1">المضارع البسيط</h3>
+    </div>
+
+    <div class="content-container">
+        <p class="description">
+            نجد أن المضارع البسيط Simple present أحد الأزمنة المهمة المستخدمة في قواعد اللغة الإنجليزية، التي يجب على كل دارس للغة الإنجليزية خصوصاً المبتدئين أو المهتمين بتعلم الإنجليزية أن يتقنها جيداً، لأنه يعد أكثر الأزمنة استخداماً في اللغة الإنجليزية في معظم المحادثات والمواقف اليومية، ويستخدم للتعبير عن الأعمال المتكررة او العادات ويستخدم ايضاً للتعبير عن الحقائق العلمية والحقائق العامة.
+        </p>
+
+        <h2 class="description2">تكوين زمن المضارع البسيط:</h2>
+        <p class="description">
+            يتكون المضارع البسيط في اللغة الإنجليزية من الفعل في صورته الأساسية في الجمع، وإضافة حرف (s) أو (es) للمفرد.
+        </p>
+        <br>
+
+        <h2 class="examples">Examples:</h2>
+        <ol class="liexample">
+            <li>They <span class="highlight">play</span> computer games every week</li>
+            <br>
+            <li>The sun <span class="highlight">sets</span> in the west</li>
+        </ol>
+        <br>
+
+        <h2 class="description2">الأفعال المساعدة:</h2>
+        <p class="description">
+            يوجد أفعال مساعدة لزمن المضارع البسيط وهي "Do" وتستخدم للجمع مثل "We, I, they, You"، و"Does" تستخدم للمفرد مثل "He, She, it، اسم مفرد".
+        </p>
+ <h2 class="description2">الدلائل 'Keywords':</h2>
+ <p class="description">
+ <ol class="liexample">
+ <li>Every + time</li>
+ <br>
+   <li>
+Always, usually, often, sometimes, neve,  seldom, rarely, generally
+   </li> 
+</ol>
+  </p>
+
+        <h2 class="description2">السؤال والنفي:</h2>
+        <p class="description">
+            - للسؤال نستخدم الأفعال المساعدة 'Do, Does' في بداية الجملة، ونحذف (S) المفرد إن وجدت.
+        </p>
+
+        <h2 class="examples">Examples:</h2>
+        <ol class="liexample">
+            <li>She reads books every day</li>
+            <br>
+            <ul>
+                <li><span class="highlight">Does</span> she read books every day?</li>
+            </ul>
+            <br>
+            <li>You always drink coffee in the morning</li>
+            <br>
+            <ul>
+                <li><span class="highlight">Do</span> you always drink coffee in the morning?</li>
+            </ul>
+        </ol>
+        <br>
+
+        <p class="description">
+            - للنفي نستخدم 'Don't, Doesn't' قبل الفعل ونحذف(S) المفرد ان وجدت
+        </p>
+
+        <h2 class="examples">Examples:</h2>
+        <ol class="liexample">
+            <li>She reads books every day</li>
+            <ul>
+                <br>
+                <li>She <span class="highlight">Doesn't</span> read books every day</li>
+            </ul>
+            <br>
+            <li>You always drink coffee in the morning</li>
+            <br>
+            <ul>
+                <li>You <span class="highlight">Don't</span> always drink coffee in the morning</li>
+            </ul>
+        </ol>
+
+        <h3 class="description2">ملحوظات:</h3>
+        <ol class="liexample1">
+            <li> اذا انتهى الفعل بحرف (ch, sh, z, x, o, s) نضيف له 'es'</li>
+            <h2 class="examples">Examples:</h2>
+            <ol class="liexample2">
+                <li>He <span class="highlight">goes</span> to the library </li>
+                <br>
+                <li>She <span class="highlight">watches</span> TV</li>
+            </ol>
+            <br>
+            <br>
+            <li>إذا انتهى الفعل بحرف(Y)وسبقه حرف ساكن نقلب (Y) إلى (i) ثم نضيف 'es'</li>
+            <h2 class="examples">Examples:</h2>
+            <ol class="liexample2">
+                <li>She <span class="highlight">studies</span> every morning</li> 
+                <br>
+                <li>He <span class="highlight">tries</span> to read every day</li>
+            </ol>
+            <br>
+            <br>
+               <li>
+      اما اذا سبق(Y) حرف صوتي ( a, e, i, o, u )  فقط  نضيف 's' دون تغيير
+    </li>
+     <h2 class="examples">Examples:</h2>
+ <ol class="liexample2">
+   <li>The boy <span class="highlight">enjoys</span> reading books.</li>
+   </ol>
+        </ol>
+        <br>
+        <br>
+        <hr>
+          <footer class="signature">
+        project by: Wesam AL-Zoubi
+    </footer>
+    </div>
+
+</body>
+</html>
+                
