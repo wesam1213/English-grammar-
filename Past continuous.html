@@ -1,42 +1,40 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simple Present </title>
+    <title>Present continuous</title>
       <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <style>
-        /* Style for the body and background */
-   body {
-  background-color: #121212;
-   font-family: 'Arial', sans-serif;
+/* Style for the body and background */
+body {
+    background-color: #121212;
+    font-family: 'Arial', sans-serif;
     color: #f0f0f0;
-     margin: 0;
-            padding: 1px 1px 100px;
-            box-sizing: border-box;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-          min-height: 100vh;
-        }
-
+    margin: 0;
+    padding: 1px 1px 100px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    direction: rtl;
+}
         /* Title container styling with fluid width */
         .title-container {
             background-color: #1e1e1e;
             padding: 20px;
             border-radius: 12px;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-            margin-bottom: 20px;
             width: 100%;
-            max-width: 90%; /* تعديل العرض ليتناسب مع الشاشات */
-            text-align: center;
+            max-width: 90%;
+            margin-bottom: 20px;
             box-sizing: border-box;
         }
 
-        /* Content container styling with fluid width */
+       /* Content container styling with fluid width */
         .content-container {
             background-color: #1e1e1e;
-            padding: 20px;
+            padding: 25px;
             border-radius: 12px;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
             width: 100%;
@@ -46,22 +44,60 @@
             margin-bottom:20px; 
         }
 
+.table {
+    width: 100%;
+    height:300px; 
+    border-collapse: collapse;
+    text-align: center;
+    table-layout: fixed;
+    color: #fff;
+    background: linear-gradient(135deg,  #1e1e1e,#56586E); /* لون متدرج */
+    direction: ltr;
+    border-radius: 12px; /* حواف مستديرة */
+    overflow: hidden; /* لتطبيق الحواف المستديرة على محتويات الجدول */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* ظل لجعل الجدول بارزًا */
+    font-size: 4.5vw; /* حجم النص بالنسبة لعرض الشاشة */
+    text-align: justify ;
+}
+
+td {
+  text-align:center; 
+    padding: 10px;
+    word-wrap: break-word;
+    border: 1px solid rgba(255, 255, 255, 0.3); /* حدود شفافة قليلاً */
+    background: rgba(0, 0, 0, 0.1); /* خلفية خفيفة للخلايا */
+}
+
+tr:hover td {
+    background: rgba(0, 0, 0, 0.3); /* تأثير عند تمرير الفأرة */
+    transition: background 0.3s ease; /* انتقال سلس */
+}
+ 
+
         /* Ensuring the containers take full width on large screens */
-        @media (min-width: 1200px) {
+        @media (min-width: 787px) {
             .title-container, .content-container {
-                padding: 20px;
+                padding: 60px;
             }
         }
+
 
         /* Title styling */
         .title {
             font-size: 6vw; /* حجم مرن للعنوان */
             color: #ffcc00;
+            text-align:center; 
         }
         .title1 {
             font-size: 5vw; /* حجم مرن للترجمة */
             color: #ffcc00;
+            text-align:center; 
         } 
+   .description, .description2, .description3, .liexample1, .liexample2 {
+            padding-right: 20px;
+            box-sizing: border-box;
+        }
+
 
         /* Description styling */
         .description {
@@ -82,15 +118,16 @@
         /* Examples styling */
         .examples {
             color: #ffcc00;
-            margin-bottom: 10px;
+            margin-bottom: 20px;
             direction: ltr;
             font-size: 5vw; /* حجم مرن للأمثلة */
         }
         .examples1 {
-            color: #ffcc00;
             margin-bottom: 10px;
             direction: ltr;
-            font-size: 3vw; /* حجم مرن للأمثلة الصغيرة */
+            font-size:5.5vw; /* حجم مرن للأمثلة الصغيرة */
+            padding:0px;
+            margin:0px; 
         } 
 
         .liexample {
@@ -102,7 +139,7 @@
             margin: 10px 0;
             font-size: 4vw;
             direction: rtl;
-            padding-right: 50px;
+            padding-right:50px;
         }
         .liexample2 {
             margin: 10px 0;
@@ -144,11 +181,12 @@
             margin: 0px 0;
             font-size: 1rem;
             transition: color 0.3s;
+            direction:ltr;
         } 
         a:hover {
             color: #ffcc00;
         } 
-        .conclusion {
+                .conclusion {
             background-color: #1e1e1e;
             padding: 20px;
             border-radius: 12px;
@@ -209,120 +247,71 @@
 </head>
 <body>
     <div class="title-container">
-        <h1 class="title">Simple Present </h1>
-        <h3 class="title1">المضارع البسيط</h3>
+        <h1 class="title"> Past continuous </h1>
+        <h3 class="title1"><الماضي المستمر></h3>
     </div>
-
-    <div class="content-container">
-        <p class="description">
-            نجد أن المضارع البسيط Simple present أحد الأزمنة المهمة المستخدمة في قواعد اللغة الإنجليزية، التي يجب على كل دارس للغة الإنجليزية خصوصاً المبتدئين أو المهتمين بتعلم الإنجليزية أن يتقنها جيداً، لأنه يعد أكثر الأزمنة استخداماً في اللغة الإنجليزية في معظم المحادثات والمواقف اليومية، ويستخدم للتعبير عن الأعمال المتكررة او العادات ويستخدم ايضاً للتعبير عن الحقائق العلمية والحقائق العامة.
-        </p>
-
-        <h2 class="description2">تكوين زمن المضارع البسيط:</h2>
-        <p class="description">
-            يتكون المضارع البسيط في اللغة الإنجليزية من الفعل في صورته الأساسية في الجمع، وإضافة حرف (s) أو (es) للمفرد.
-        </p>
-        <br>
-
-        <h2 class="examples">Examples:</h2>
-        <ol class="liexample">
-            <li>They <span class="highlight">play</span> computer games every week</li>
-            <br>
-            <li>The sun <span class="highlight">sets</span> in the west</li>
-        </ol>
-        <br>
-
-        <h2 class="description2">الأفعال المساعدة:</h2>
-        <p class="description">
-            يوجد أفعال مساعدة لزمن المضارع البسيط وهي "Do" وتستخدم للجمع مثل "We, I, they, You"، و"Does" تستخدم للمفرد مثل "He, She, it، اسم مفرد".
-        </p>
- <h2 class="description2">الدلائل 'Keywords':</h2>
+    
+   <div class="content-container">
  <p class="description">
- <ol class="liexample">
- <li>Every + time</li>
- <br>
-   <li>
-Always, usually, often, sometimes, neve,  seldom, rarely, generally
-   </li> 
-</ol>
-  </p>
-
-        <h2 class="description2">السؤال والنفي:</h2>
-        <p class="description">
-            - للسؤال نستخدم الأفعال المساعدة 'Do, Does' في بداية الجملة، ونحذف (S) المفرد إن وجدت.
-        </p>
-
-        <h2 class="examples">Examples:</h2>
-        <ol class="liexample">
-            <li>She reads books every day</li>
-            <br>
-            <ul>
-                <li><span class="highlight">Does</span> she read books every day?</li>
-            </ul>
-            <br>
-            <li>You always drink coffee in the morning</li>
-            <br>
-            <ul>
-                <li><span class="highlight">Do</span> you always drink coffee in the morning?</li>
-            </ul>
-        </ol>
+  الماضي المستمر'Past Continuous'‏ هو زمن من أزمنة اللغة الإنجليزية وهو الزمن الذي يشير إلى فعل أو حدث مستمر في زمن الماضي أي أن هذا الحدث مازال في الاستمرار في الماضي بحيث بدأ في وقت معين في الماضي ومازال مستمرا حتي الوقت الحاضر، وبعبارة أخرى يُعَبِر الماضي المستمر عن أفعال غير مُنتهية أو غير مكتمِلة في الماضي. 
+ </p>
+   <h2 class="description2">تكوين الماضي المستمر:</h2>
+    <pre class="examples1">
+      <sub>was</sub>
+  S +     + V<sub>1 ing</sub>
+      <sup>were</sup>
+    </pre>
         <br>
-
-        <p class="description">
-            - للنفي نستخدم 'Don't, Doesn't' قبل الفعل ونحذف(S) المفرد ان وجدت
-        </p>
-
-        <h2 class="examples">Examples:</h2>
-        <ol class="liexample">
-            <li>She reads books every day</li>
-            <ul>
-                <br>
-                <li>She <span class="highlight">Doesn't</span> read books every day</li>
-            </ul>
-            <br>
-            <li>You always drink coffee in the morning</li>
-            <br>
-            <ul>
-                <li>You <span class="highlight">Don't</span> always drink coffee in the morning</li>
-            </ul>
-        </ol>
-
-        <h3 class="description2">ملحوظات:</h3>
-        <ol class="liexample1">
-            <li> اذا انتهى الفعل بحرف (ch, sh, z, x, o, s) نضيف له 'es'</li>
-            <h2 class="examples">Examples:</h2>
-            <ol class="liexample2">
-                <li>He <span class="highlight">goes</span> to the library </li>
-                <br>
-                <li>She <span class="highlight">watches</span> TV</li>
-            </ol>
-            <br>
-            <br>
-            <li>إذا انتهى الفعل بحرف(Y)وسبقه حرف ساكن نقلب (Y) إلى (i) ثم نضيف 'es'</li>
-            <h2 class="examples">Examples:</h2>
-            <ol class="liexample2">
-                <li>She <span class="highlight">studies</span> every morning</li> 
-                <br>
-                <li>He <span class="highlight">tries</span> to read every day</li>
-            </ol>
-            <br>
-            <br>
-               <li>
-      اما اذا سبق(Y) حرف صوتي ( a, e, i, o, u )  فقط  نضيف 's' دون تغيير
-    </li>
-     <h2 class="examples">Examples:</h2>
+ <h2 class="examples">Examples:</h2>
  <ol class="liexample2">
-   <li>The boy <span class="highlight">enjoys</span> reading books.</li>
-   </ol>
-        </ol>
-        <br>
-        <br>
-        <hr>
-        <br>
-    <div >
-  <a href="index.html">> العوده الى الصفحة الرئيسية</a>
+ <li>He <span class="highlight">was studying</span> hard</li>
+ <br>
+  <li>I <span class="highlight">was playing</span> football</li>
   <br>
-  <a href="Present continuous.html">> التالي</a>
+  <li>We <span class="highlight">were learning</span> English</li>
+    </ol>
+  <br>
+<h2 class="description2"> 
+الروابط: 
+</h2>
+  <p class="description">
+    يمتاز الماضي المستمر بروابط تُعتبر كالدلائل وتستخدم في ربط جملتين احدهما ماضي مستمر والأخرى ماضي بسيط وهما (when)'عندما' و (while)'بينما'.
+<table class="table" border="1" >
+  <tr>
+    <td>ماضي مستمر <span>⟸ when ⟹</span> ماضي بسيط</td>
+  </tr>
+  <tr>
+    <td>ماضي بسيط <span>⟸ while ⟹</span> ماضي مستمر</td>
+  </tr>
+  </table> 
+ </p>
+     <h2 class="examples">Example:</h2>
+      <ol class="liexample2">
+ <li> The phone rang <span class="highlight">while</span> l was watching TV</li>
+ <br>
+  <li>He was riding his bike <span class="highlight">when</span> he fell off</li>
+    </ol>
+   <br>
+    <h3 class="description2">
+     ملحوظة: 
+   </h3>
+  <p class="description">
+    من الممكن ان يأتي الرابط اول الجملة عندها يصبح الترتيب: 
+  </p>
+  <table class="table" border="1" >
+  <tr>
+    <td><span>when ⟹</span> ماضي مستمر ، ماضي بسيط </td>
+  </tr>
+  <tr>
+     <td><span>while ⟹</span> ماضي بسيط ، ماضي مستمر</td>
+  </tr>
+  </table> 
+   <br>
+   <br>
+   <hr>
+   <br>
+   <div >
+  <a href="index.html">> العوده الى الصفحة الرئيسية</a>
 </div>
   </div>
   <div class="conclusion">
@@ -343,5 +332,4 @@ Always, usually, often, sometimes, neve,  seldom, rarely, generally
 محتوى الموقع محمي بموجب قوانين حقوق الطبع والنشر، ويهدف إلى تقديم قواعد اللغة الإنجليزية بطريقة سهلة ومبسطة.</p>
 </div>
 </body>
-</html>
-                
+</html> 
