@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Present continuous</title>
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <style>
+/* Style for the body and background */
+body {
+    background-color: #121212;
+    font-family: 'Arial', sans-serif;
+    color: #f0f0f0;
+    margin: 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    direction: rtl;
+}
+        /* Title container styling with fluid width */
+        .title-container {
+            background-color: #1e1e1e;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            width: 100%;
+            max-width: 90%;
+            margin-bottom: 20px;
+            box-sizing: border-box;
+        }
+
+       /* Content container styling with fluid width */
+        .content-container {
+            background-color: #1e1e1e;
+            padding: 10px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            width: 100%;
+            max-width: 90%;
+            animation: slideIn 1s ease-out;
+            box-sizing: border-box;
+            margin-bottom:20px; 
+        }
+
+.table {
+    width: 100%;
+    height:100px; 
+    border-collapse: collapse;
+    text-align: center;
+    table-layout: fixed;
+    color: #fff;
+    background: linear-gradient(135deg,  #1e1e1e,#56586E); /* لون متدرج */
+    direction: ltr;
+    border-radius: 12px; /* حواف مستديرة */
+    overflow: hidden; /* لتطبيق الحواف المستديرة على محتويات الجدول */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* ظل لجعل الجدول بارزًا */
+    font-size: 4.5vw; /* حجم النص بالنسبة لعرض الشاشة */
+    text-align: justify ;
+}
+
+td {
+  text-align:center; 
+    padding: 10px;
+    word-wrap: break-word;
+    border: 1px solid rgba(255, 255, 255, 0.3); /* حدود شفافة قليلاً */
+    background: rgba(0, 0, 0, 0.1); /* خلفية خفيفة للخلايا */
+}
+
+tr:hover td {
+    background: rgba(0, 0, 0, 0.3); /* تأثير عند تمرير الفأرة */
+    transition: background 0.3s ease; /* انتقال سلس */
+}
+        /* Title styling */
+        .title {
+            font-size: 6vw; /* حجم مرن للعنوان */
+            color: #ffcc00;
+            text-align:center; 
+        }
+        .title1 {
+            font-size: 5vw; /* حجم مرن للترجمة */
+            color: #ffcc00;
+            text-align:center; 
+        } 
+   .description, .description2, .description3, .liexample1, .liexample2 {
+            box-sizing: border-box;
+        }
+
+
+        /* Description styling */
+        .description {
+            font-size: 4vw; /* حجم مرن للنص */
+            margin-bottom: 20px;
+            line-height: 1.5;
+            direction: rtl;
+        }
+        .description2 {
+            color: #00bfff;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* ظل خفيف */
+            font-size: 5vw; /* حجم مرن للنص */
+            margin-bottom: 20px;
+            line-height: 1.5;
+            direction: rtl;
+        }
+
+        /* Examples styling */
+        .examples {
+            color: #ffcc00;
+            margin-bottom: 20px;
+            direction: ltr;
+            font-size: 5vw; /* حجم مرن للأمثلة */
+        }
+        .examples1 {
+            margin-bottom: 10px;
+            direction: ltr;
+            font-size:5.5vw; /* حجم مرن للأمثلة الصغيرة */
+            padding:0px;
+            margin:0px; 
+        } 
+                .examples2 {
+            border: 2px solid #FFFFFF; /* لون وحجم الإطار */
+            border-radius: 22px; /* حواف مستديرة للإطار */
+            text-align: center;
+            padding-top:20px
+        } 
+
+        .liexample {
+            margin: 10px 0;
+            font-size: 4vw; /* حجم مرن لقائمة الأمثلة */
+        }
+
+        .liexample1 {
+            margin: 10px 0;
+            font-size: 4vw;
+            direction: rtl;
+            padding-right:50px;
+        }
+        .liexample2 {
+            margin: 10px 0;
+            font-size: 4vw;
+            direction: ltr;
+        } 
+        ul{
+            padding-left: 10px; /* إزالة المسافة من بداية السطر */
+            margin: 0; /* إزالة الهامش */
+        } 
+
+        .highlight {
+            color: #00cc99;
+            font-weight: bold;
+        }
+
+        /* Animation for content-container */
+        @keyframes slideIn {
+            0% {
+                transform: translateY(-30px);
+                opacity: 0;
+            }
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+        .signature {
+            direction: ltr;
+            font-size: 3vw;
+            color: #f0f0f0;
+            font-style: italic;
+        }
+          a {
+            display: block;
+            color: #00bfff;
+            text-decoration: none;
+            margin: 0px 0;
+            font-size: 1rem;
+            transition: color 0.3s;
+            direction:ltr;
+        } 
+        a:hover {
+            color: #ffcc00;
+        } 
+            .conclusion {
+            background-color: #1e1e1e;
+            padding: 10px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            width: 100%;
+            max-width: 90%;
+            animation: slideIn 1s ease-out;
+            box-sizing: border-box;
+}    
+   .social-icons {
+            display: flex;
+            margin:20px 1px 1px 1px; 
+            justify-content: space-around; 
+        }
+        .social-icons a {
+            color: #fff;
+            font-size: 24px;
+            text-decoration: none;
+            transition: transform 0.3s;
+        }
+    .conclusion p {
+        font-size: 3.5vw; 
+        line-height: 1.5;
+    }
+
+    .conclusion h5 {
+        font-size: 4vw;
+        direction:ltr;
+        color: #007ACC;
+    }
+/* Media query for min-width: 787px */
+@media (min-width: 787px) {
+    body {
+        background-color: #121212;
+        font-family: 'Arial', sans-serif;
+        color: #f0f0f0;
+        margin: 0;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        min-height: 100vh;
+    }
+
+    /* Title container styling with fluid width */
+    .title-container {
+        background-color: #1e1e1e;
+        padding: 1.5rem;
+        border-radius: 30px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        margin-bottom: 2.5rem;
+        width: 100%;
+        max-width: 90%;
+        text-align: center;
+        box-sizing: border-box;
+    }
+
+    /* Content container styling with fluid width */
+    .content-container {
+        background-color: #1e1e1e;
+        padding: 1.5rem;
+        border-radius: 30px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        width: 100%;
+        max-width: 90%;
+        animation: slideIn 1s ease-out;
+        box-sizing: border-box;
+        margin-bottom: 2.5rem;
+    }
+
+    /* Title styling */
+    .title {
+        font-size: 3rem; /* تعديل الحجم */
+        color: #ffcc00;
+    }
+
+    .title1 {
+        font-size: 2.5rem; /* تعديل الحجم */
+        color: #ffcc00;
+    }
+
+    /* Description styling */
+    .description {
+        font-size: 1.5rem; /* تعديل الحجم */
+        margin-bottom: 1.5rem;
+        line-height: 1.5;
+        direction: rtl;
+    }
+
+    .description2 {
+        color: #00bfff;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+        font-size: 2rem; /* تعديل الحجم */
+        margin-bottom: 1.5rem;
+        line-height: 1.5;
+        direction: rtl;
+    }
+
+    /* Examples styling */
+    .examples {
+        color: #ffcc00;
+        margin-bottom: 1.2rem;
+        direction: ltr;
+        font-size: 2rem; /* تعديل الحجم */
+    }
+
+    .examples1 {
+        margin-bottom: 1.2rem;
+        direction: ltr;
+        font-size: 3.5rem; /* تعديل الحجم */
+    }
+
+    .liexample {
+        margin: 0.8rem 0;
+        font-size: 1.5rem; /* تعديل الحجم */
+    }
+
+    .liexample1 {
+        margin: 0.8rem 0;
+        font-size: 1.5rem;
+        direction: rtl;
+        padding-right: 3rem;
+    }
+
+    .liexample2 {
+        margin: 0.8rem 0;
+        font-size: 1.5rem;
+        direction: ltr;
+    }
+
+    ul {
+        padding-left: 1.5rem;
+    }
+
+    .highlight {
+        color: #00cc99;
+        font-weight: bold;
+    }
+
+    .signature {
+        direction: ltr;
+        font-size: 1.8rem;
+        color: #f0f0f0;
+        font-style: italic;
+    }
+
+    a {
+        display: block;
+        color: #00bfff;
+        text-decoration: none;
+        margin: 0;
+        font-size: 1.8rem;
+        transition: color 0.3s;
+    }
+
+    a:hover {
+        color: #ffcc00;
+    }
+
+  
+    /* الأيقونات */
+  .conclusion {
+    background-color: #1e1e1e;
+      padding:10px;
+       border-radius: 30px;
+       box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+       width: 100%;
+       max-width: 90%;
+            animation: slideIn 1s ease-out;
+            box-sizing: border-box;
+}    
+    .social-icons {
+        display: flex;
+        justify-content: space-around;
+        margin: 50px 0 0 0;
+    }
+
+    .social-icons a {
+        color: #fff;
+        font-size: 4.5rem; /* حجم مناسب للأيقونات */
+        text-decoration: none;
+        transition: transform 0.3s;
+    }
+
+    .social-icons a:hover {
+        transform: scale(1.4);
+        color: #00bfff;
+    }
+    /* الخاتمة */
+    .conclusion p {
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+
+    .conclusion h5 {
+        font-size: 1.2rem;
+        color: #007ACC;
+    }
+    .ended2{
+      direction: rtl;
+    }  
+}
+
+    </style>
+</head>
+<body>
+    <div class="title-container">
+        <h1 class="title"> Past continuous </h1>
+        <h3 class="title1"><الماضي المستمر></h3>
+    </div>
+    
+   <div class="content-container">
+ <p class="description">
+  الماضي المستمر'Past Continuous'‏ هو زمن من أزمنة اللغة الإنجليزية وهو الزمن الذي يشير إلى فعل أو حدث مستمر في زمن الماضي أي أن هذا الحدث مازال في الاستمرار في الماضي بحيث بدأ في وقت معين في الماضي ومازال مستمرا حتي الوقت الحاضر، وبعبارة أخرى يُعَبِر الماضي المستمر عن أفعال غير مُنتهية أو غير مكتمِلة في الماضي. 
+ </p>
+   <h2 class="description2">تكوين الماضي المستمر:</h2>
+   <div class="examples2">
+      <pre class="examples1">
+S + was/were + V<sub>1 ing</sub>
+    </pre>
+</div>
+        <br>
+ <h2 class="examples">Examples:</h2>
+ <ol class="liexample2">
+ <li>He <span class="highlight">was studying</span> hard</li>
+ <br>
+  <li>I <span class="highlight">was playing</span> football</li>
+  <br>
+  <li>We <span class="highlight">were learning</span> English</li>
+    </ol>
+  <br>
+<h2 class="description2"> 
+الروابط: 
+</h2>
+  <p class="description">
+    يمتاز الماضي المستمر بروابط تُعتبر كالدلائل وتستخدم في ربط جملتين احدهما ماضي مستمر والأخرى ماضي بسيط وهما (when)'عندما' و (while)'بينما'.
+<table class="table" border="1" >
+  <tr>
+    <td>ماضي مستمر <span>⟸ when ⟹</span> ماضي بسيط</td>
+  </tr>
+  <tr>
+    <td>ماضي بسيط <span>⟸ while ⟹</span> ماضي مستمر</td>
+  </tr>
+  </table> 
+ </p>
+     <h2 class="examples">Example:</h2>
+      <ol class="liexample2">
+ <li> The phone rang <span class="highlight">while</span> l was watching TV</li>
+ <br>
+  <li>He was riding his bike <span class="highlight">when</span> he fell off</li>
+    </ol>
+   <br>
+    <h3 class="description2">
+     ملحوظة: 
+   </h3>
+  <p class="description">
+    من الممكن ان يأتي الرابط اول الجملة عندها يصبح الترتيب: 
+  </p>
+  <table class="table" border="1" >
+  <tr>
+    <td><span>when ⟹</span> ماضي مستمر ، ماضي بسيط </td>
+  </tr>
+  <tr>
+     <td><span>while ⟹</span> ماضي بسيط ، ماضي مستمر</td>
+  </tr>
+  </table> 
+   <br>
+   <br>
+   <hr>
+   <br>
+   <div >
+  <a href="index.html">> العوده الى الصفحة الرئيسية</a>
+  <br>
+    <a href="Present perfect.html">> التالي</a>
+  <br>
+  <br>
+</div>
+  </div>
+  <div class="conclusion">
+   <div class="social-icons">
+        <a href="https://www.facebook.com/osam.mohammd?mibextid=ZbWKwL" target="_blank" class="fab fa-facebook"></a>
+        <a href="https://www.instagram.com/wm.x_x/profilecard/?igsh=MTNrODB2ajBjY3VyOQ==" target="_blank" class="fab fa-instagram"></a>
+        <a href="https://www.snapchat.com/add/wesamal-zoubi?share_id=oLLzvW2rY7Q&locale=ar-JO" target="_blank" class="fab fa-snapchat"></a>
+      <a href="https://wa.me/962790264286?text=مرحباً%20أريد%20التواصل%20معك "  target="_blank" class="fab fa-whatsapp"></a>
+<a href="tel:+962790264286">
+    <i class="fas fa-phone"></i>
+</a>
+
+
+    </div>
+    <br>
+  <h5 class="rights">© 2024 English Grammar. Developed by Wesam Al-Zoubi</h5>
+<p class="ended2" >
+محتوى الموقع محمي بموجب قوانين حقوق الطبع والنشر، ويهدف إلى تقديم قواعد اللغة الإنجليزية بطريقة سهلة ومبسطة</p>
+</div>
+<br>
+</body>
+</html> 
