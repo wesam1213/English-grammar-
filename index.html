@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <title>الصفحة الرئيسية - قواعد اللغة الإنجليزية</title>
+    <style>
+        body {
+            margin:0;
+            font-family: 'Arial', sans-serif;
+            background-color: #121212;
+            color: #f0f0f0;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            overflow-x: hidden;
+        }
+
+        .header {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+        }
+
+        .menu-button {
+            background-color: #00bfff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            font-size: 2rem;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .menu-button:hover {
+            background-color: #ffcc00;
+        }
+
+        .sidebar {
+            position: absolute;
+            top: 0;
+            left: -300px;
+            width: 300px;
+            height:500px;
+            background-color: #1e1e1e;
+            box-shadow: 4px 0 15px rgba(0, 0, 0, 0.3);
+            padding: 20px;
+            box-sizing: border-box;
+            z-index: 1000;
+            transition: left 0.4s ease-in-out;
+            overflow-y: auto; /* للسماح بالتمرير العمودي داخل القائمة */
+        }
+
+        .sidebar.open {
+            left: 0;
+        }
+
+        .sidebar h2 {
+            color: #ffcc00;
+            margin-bottom: 20px;
+            font-size: 3rem;
+        }
+
+        .sidebar a {
+            display: block;
+            color: #00bfff;
+            text-decoration: none;
+            margin: 100px 0;
+            font-size: 2rem;
+            transition: color 0.3s;
+        }
+
+        .sidebar a:hover {
+            color: #ffcc00;
+        }
+        .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: none; /* مخفية افتراضيًا */
+    z-index: 999;
+}
+.overlay.show {
+    display: block; /* تظهر عند فتح القائمة */
+} 
+
+        .content {
+            padding: 15px;
+            transition: margin-left 0.4s ease-in-out;
+        }
+
+        .content.shifted {
+            margin-left: 300px; /* تعويض المساحة التي تشغلها القائمة */
+        }
+
+        .card {
+            background-color: #1e1e1e;
+            padding: 40px; 
+            border-radius: 20px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            margin: 20px auto;
+            max-width: 90%;
+            text-align: center;
+            transition: max-width 0.4s ease-in-out;
+        }
+        
+        .card.smaller {
+            max-width: 90%; /* تقليص المستطيل من اليسار */
+        }
+
+        .card h1 {
+            font-size:4.5vw;
+            color: #ffcc00;
+        }
+        .card h2{
+         color: #00bfff; 
+        } 
+        
+        .highlight{
+          color: #00cc99;
+         font-weight: bold;
+        } 
+
+        .card p {
+            font-size: 1rem;
+            line-height: 1.8;
+        }
+        
+    /* الأيقونات */
+     .conclusion {
+            background-color: #1e1e1e;
+            padding:20px;
+            border-radius: 30px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            width: 100%;
+            max-width: 90%;
+            animation: slideIn 1s ease-out;
+            box-sizing: border-box;
+}    
+    .social-icons {
+        display: flex;
+        justify-content: space-around;
+        margin: 20px 0;
+    }
+
+    .social-icons a {
+        color: #fff;
+        font-size: 4.5rem; /* حجم مناسب للأيقونات */
+        text-decoration: none;
+        
+        transition: transform 0.3s;
+    }
+
+    .social-icons a:hover {
+        transform: scale(1.4);
+        color: #00bfff;
+    }
+    /* الخاتمة */
+    .conclusion p {
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+
+    .conclusion h5 {
+        font-size: 1.2rem;
+        color: #007ACC;
+    }
+        
+            @media (max-width: 787px) {
+          body {
+            margin:0;
+            font-family: 'Arial', sans-serif;
+            background-color: #121212;
+            color: #f0f0f0;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            overflow-x: hidden;
+        }
+
+        .header {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+        }
+
+        .menu-button {
+            background-color: #00bfff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .menu-button:hover {
+            background-color: #ffcc00;
+        }
+
+        .sidebar {
+            position: fixed;
+            top: 0;
+            left: -300px;
+            width: 150px;
+            height: 100%;
+            background-color: #1e1e1e;
+            box-shadow: 4px 0 15px rgba(0, 0, 0, 0.3);
+            padding: 10px;
+            box-sizing: border-box;
+            z-index: 1000;
+            transition: left 0.4s ease-in-out;
+        }
+
+        .sidebar.open {
+            left: 0;
+        }
+
+        .sidebar h2 {
+            color: #ffcc00;
+            margin-bottom: 20px;
+            font-size: 1.2rem;
+            margin-bottom:80px; 
+        }
+
+        .sidebar a {
+            display: block;
+            color: #00bfff;
+            text-decoration: none;
+            margin: 60px 0;
+            font-size: 1rem;
+            transition: color 0.3s;
+        }
+
+        .sidebar a:hover {
+            color: #ffcc00;
+        }
+
+        .content {
+            padding: 0px;
+            transition: margin-left 0.4s ease-in-out;
+        }
+
+        .content.shifted {
+            margin-left: 160px; /* تعويض المساحة التي تشغلها القائمة */
+        }
+
+        .card {
+            background-color: #1e1e1e;
+            padding: 20px; 
+            border-radius: 20px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            margin: 10px auto;
+            max-width: 80%;
+            text-align: center;
+            transition: max-width 0.4s ease-in-out;
+        } 
+        .card.smaller {
+            max-width: 90%; /* تقليص المستطيل من اليسار */
+        }
+         .card1.smaller {
+            max-width: 90%; /* تقليص المستطيل من اليسار */
+        }
+
+        .card h1 {
+            font-size:6vw;
+            color: #ffcc00;
+            margin-top:40px; 
+            margin-bottom:30px; 
+        }
+        .card h2{
+         color: #00bfff; 
+        } 
+        
+        .highlight{
+          color: #00cc99;
+         font-weight: bold;
+        } 
+
+        .card p {
+            font-size: 1rem;
+            line-height: 1.8;
+        }
+           a {
+            display: block;
+            color: #00bfff;
+            text-decoration: none;
+            margin: 0px 0;
+            font-size: 1rem;
+            transition: color 0.3s;
+        } 
+        a:hover {
+            color: #ffcc00;
+        } 
+              .conclusion {
+            background-color: #1e1e1e; 
+            border-radius: 20px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            margin:0 auto; 
+            width: 100%;
+            max-width: 90%;
+            animation: slideIn 1s ease-out;
+            box-sizing: border-box;
+}    
+   .social-icons {
+            display: flex;
+            margin:20px 1px 1px 1px; 
+            justify-content: space-around; 
+        }
+        .social-icons a {
+            color: #fff;
+            font-size: 24px;
+            text-decoration: none;
+            transition: transform 0.3s;
+        }
+    .conclusion p {
+        font-size: 3.5vw; 
+        line-height: 1.5;
+    }
+
+    .conclusion h5 {
+        font-size: 4vw;
+        color: #007ACC;
+    }
+.ended2{
+      direction: rtl;
+    } 
+}
+           
+
+    </style>
+</head>
+<body>
+    <div class="header">
+        <button class="menu-button" onclick="toggleSidebar()">☰ القواعد</button>
+    </div>
+
+    <div class="sidebar" id="sidebar">
+        <h2>قائمة القواعد</h2>
+        <a href="establishment.html" target="_blank">التأسيس</a>
+        <a href="Simple present.html" target="_blank">Simple present (مضارع بسيط)</a>
+        <a href="Present continuous.html" target="_blank">Present continuous (مضارع مستمر)</a>
+        <a href="Simple past.html" target="_blank">Simple past (ماضي بسيط)</a>
+        <a href="Past continuous.html" target="_blank">Past continuous (ماضي مستمر)</a>
+        <a href="Present perfect.html" target="_blank">Present perfect <br> (مضارع تام)</a>
+        <a href="Present perfect continuous.html" target="_blank">Present perfect continuous (مضارع تام مستمر)</a>
+        <a href="Past perfect.html" target="_blank">Past perfect (ماضي تام)</a>
+        <a href="past perfect continuous.html" target="_blank">Past perfect continuous <br>(ماضي تام مستمر)</a>
+            
+    </div>
+<div class="overlay" id="overlay" onclick="toggleSidebar()"></div>
+    <div class="content" id="content">
+        <div class="card">
+            <h1>مرحبًا بك في دليل قواعد اللغة الإنجليزية</h1>
+        </div>
+          <div class="card">
+            <h2>ما هي القواعد الأنجليزية؟</h2>
+            <p>وهي تعبر عن <span class="highlight">مجموعة القواعد</span> التي تحدد تراكيب الجمل والتعبيرات المختلفة في اللغة الإنجليزية
+            </p>
+        </div>
+          <div class="card">
+            <h2>هل القواعد الأنجليزية مهمة؟</h2>
+  <p>نعم، قواعد الانجليزية <span  class="highlight">مهمة بشكل كبير</span> ؛ لذلك من خلالها يتم بناء الكلمة بالشكل الصحيح؛ ويتم وضع كل جزئية من أجزاء الجملة في مكانها الصحيح. أيضا كل ما يحلو لك بإمكانك الحديث عنه بطريقة مبسطة باستخدام قواعد الإنجليزي، فهي المفتاح لفهم أساسيات التواصل باللغة الإنجليزية بشكل صحيح وسليم </p>
+        </div>
+        <div class="card">
+            <p> يمكنك اختيار الموضوع الذي تريد تعلمه من خلال <span class="highlight">القائمة الجانبية</span> (من خلال الضغط على كلمة قواعد في اعلى الشاشه على اليسار) فهي تحتوي على <span class="highlight">شرح شامل</span> لكل من <span class="highlight">الأساسيات والقواعد</span>
+            </p>
+            </div>
+    </div>
+  <div class="conclusion">
+   <div class="social-icons">
+        <a href="https://www.facebook.com/osam.mohammd?mibextid=ZbWKwL" target="_blank" class="fab fa-facebook"></a>
+        <a href="https://www.instagram.com/wm.x_x/profilecard/?igsh=MTNrODB2ajBjY3VyOQ==" target="_blank" class="fab fa-instagram"></a>
+        <a href="https://www.snapchat.com/add/wesamal-zoubi?share_id=oLLzvW2rY7Q&locale=ar-JO" target="_blank" class="fab fa-snapchat"></a>
+      <a href="https://wa.me/962790264286?text=مرحباً%20أريد%20التواصل%20معك "  target="_blank" class="fab fa-whatsapp"></a>
+<a href="tel:+962790264286">
+    <i class="fas fa-phone"></i>
+</a>
+
+
+    </div>
+    <br>
+  <h5 class="rights">© 2024 English Grammar. Developed by Wesam Al-Zoubi</h5>
+<p class="ended2" >
+محتوى الموقع محمي بموجب قوانين حقوق الطبع والنشر، ويهدف إلى تقديم قواعد اللغة الإنجليزية بطريقة سهلة ومبسطة</p>
+</div>
+<br>
+    <script>
+const sidebar = document.getElementById('sidebar');
+const overlay = document.getElementById('overlay');
+
+// وظيفة التحكم في فتح/إغلاق القائمة الجانبية
+function toggleSidebar() {
+    sidebar.classList.toggle('open');
+    overlay.classList.toggle('show');
+}
+
+// إغلاق القائمة الجانبية عند النقر خارجها
+document.addEventListener('click', (event) => {
+    if (!sidebar.contains(event.target) && !event.target.closest('.menu-button')) {
+        sidebar.classList.remove('open');
+        overlay.classList.remove('show');
+    }
+});
+
+// إغلاق القائمة الجانبية عند النقر على رابط
+document.querySelectorAll('.sidebar a').forEach(link => {
+    link.addEventListener('click', () => {
+        sidebar.classList.remove('open');
+        overlay.classList.remove('show');
+    });
+});
+    </script>
+</body>
+</html>
